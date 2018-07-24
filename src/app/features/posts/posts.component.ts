@@ -1,7 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { PostSandbox } from "./post.sandbox";
 import { Post } from "../../features/posts/post.types";
-import { ResultsService } from "../../service/results/results.service";
 
 import { Observable } from "rxjs";
 
@@ -12,18 +11,12 @@ import { Observable } from "rxjs";
 })
 export class PostsComponent implements OnInit {
   posts: Post[];
-  constructor(
-    private postSandbox: PostSandbox,
-    private resultService: ResultsService
-  ) {}
+  constructor(private postSandbox: PostSandbox) {}
 
   ngOnInit() {
     this.postSandbox.fetchPost().subscribe(data => {
       console.log(data, "data");
       this.posts = data;
-    });
-    this.resultService.getResult().subscribe(data => {
-      console.log(data, "results");
     });
   }
 }
