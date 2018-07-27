@@ -1,13 +1,13 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
-import { PostsModule } from "./posts/posts.module";
+import { LoginModule } from "./login/login.module";
 
-const imports = [CommonModule, PostsModule];
+const imports = [CommonModule];
 
 @NgModule({
   imports: imports,
   declarations: [],
-  exports: [PostsModule]
+  exports: [LoginModule]
 })
 export class FeaturesModule {}

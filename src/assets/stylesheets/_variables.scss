@@ -1,0 +1,36 @@
+$vm-teal: #00c0f3;
+$vm-blue: #235dab;
+$gray-lighter: #eeeeee;
+$black: #000000;
+$white: #ffffff;
+$gray-light: #777777;
+
+$xs-screen: 480px;
+$sm-screen: 768px;
+$md-screen: 1024px;
+$lg-screen: 1200px;
+$xl-screen: 1440px;
+
+$default-border-radius: 6px;
+$default-padding: 2em;
+
+$primary: $vm-blue !default;
+
+$font-primary: "Open Sans", "Arial", sans-serif !default;
+$app-max-width: 1500px;
+$logo-footer-width: 200px;
+$logo-footer-height: 80px;
+$logo-footer-bg: $gray-lighter !default;
+
+$app-bg-color: $gray-lighter;
+$section-bg-color: $white;
+$app-text-color: $black;
+$nav-bar-bg-color: $primary;
+$banner-bg-color: rgba(#00c0f3, 0.7);
+$login-bg-color: #235dab;
+
+$logo-path: "src/assets/img/eAccess-logo.png" !default;
+$hero-image-url: "src/assets/img/client-images/depuy/hero-image.png";
+
+$isi-font-size: 0.714em;
+$isi-header-font-size: 0.857em;

@@ -1,0 +1,87 @@
+@import "~src/assets/stylesheets/variables";
+@import "~src/assets/stylesheets/mixin";
+.footer {
+  background-color: $app-bg-color;
+  bottom: 0;
+  font-family: $font-primary;
+  max-width: $app-max-width;
+  padding-bottom: 2em;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 0.938em;
+  @include text-color($app-bg-color);
+
+  &__links {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__link {
+    padding: 0 1em;
+
+    &:not(:first-of-type) {
+      border-left: 1px solid $gray-light;
+    }
+  }
+
+  &__logo {
+    width: $logo-footer-width;
+    height: $logo-footer-height;
+    background: url($logo-footer-bg) center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+  }
+
+  &__powered-by-logo {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: em(164px);
+    transform: translate(0, -50%);
+  }
+
+  &__virmedica-logo {
+    height: em(45px);
+  }
+
+  &__portal-version {
+    position: absolute;
+    left: 0;
+  }
+
+  &__copyright {
+    line-height: em(10px);
+  }
+
+  &__details {
+    line-height: em(10px);
+    white-space: pre-wrap;
+  }
+
+  .info-saparator {
+    font-size: em(8px);
+    margin-left: em(15px);
+    margin-right: em(15px);
+    line-height: em(10px);
+    vertical-align: middle;
+  }
+}
+
+@media (max-width: $sm-screen) {
+  .footer {
+    font-size: em(14px);
+    padding: 0 1em 2em;
+
+    &__powered-by-logo {
+      position: static;
+    }
+  }
+}
+
+@media (max-width: $md-screen) {
+  .footer__powered-by-logo {
+    position: static;
+  }
+}

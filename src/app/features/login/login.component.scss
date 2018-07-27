@@ -1,0 +1,97 @@
+@import "~src/assets/stylesheets/variables";
+@import "~src/assets/stylesheets/mixin";
+#landing-page {
+  padding: 0;
+}
+
+.landing-page {
+  &__body {
+    align-items: stretch;
+    border-top-left-radius: $default-border-radius;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__hero {
+    background-image: url($hero-image-url);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-top-left-radius: $default-border-radius;
+    width: 70%;
+  }
+
+  &__banner {
+    background: $banner-bg-color;
+  }
+
+  &__banner-text {
+    font-weight: 600;
+    margin: 37.5rem 0 0;
+    padding: 0.3em 1em;
+    word-break: break-word;
+
+    @media (min-width: $xs-screen) {
+      font-size: 2rem;
+    }
+    @media (min-width: $sm-screen) {
+      font-size: 2rem;
+    }
+    @media (min-width: $md-screen) {
+      font-size: 3rem;
+    }
+    @media (min-width: $lg-screen) {
+      font-size: 4rem;
+    }
+    @media (min-width: $xl-screen) {
+      font-size: 6rem;
+    }
+  }
+
+  &__content-text {
+    white-space: pre-wrap;
+  }
+
+  p.landing-page__banner-text {
+    @include text-color($login-bg-color);
+  }
+
+  h3.landing-page__title {
+    @include text-color($login-bg-color);
+    @include border-color($login-bg-color);
+  }
+
+  &__form {
+    background-color: $login-bg-color;
+    border-top-right-radius: $default-border-radius;
+    padding: $default-padding;
+    position: relative;
+    width: 30%;
+
+    .landing-page__form-label {
+      @include text-color($login-bg-color);
+    }
+  }
+
+  &__login-button {
+    margin-top: 2em;
+    text-align: center;
+  }
+
+  .registration-info {
+    margin-top: 9em;
+    text-align: center;
+
+    a {
+      font-size: 14px;
+    }
+
+    p {
+      color: white;
+    }
+  }
+
+  &__content {
+    padding: $default-padding;
+  }
+}

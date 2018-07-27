@@ -1,0 +1,26 @@
+// need to takes this put to global scope
+// Calculate text color based on bacground-color
+@mixin text-color($bgColor) {
+  $red: red($bgColor);
+  $green: green($bgColor);
+  $blue: blue($bgColor);
+  $yiq: (($red * 299) + ($green * 587) + ($blue * 114)) / 1000;
+  @if ($yiq >= 128) {
+    color: $black;
+  } @else {
+    color: $white;
+  }
+}
+
+// Calculate border color based on background-color
+@mixin border-color($bgColor) {
+  $red: red($bgColor);
+  $green: green($bgColor);
+  $blue: blue($bgColor);
+  $yiq: (($red * 299) + ($green * 587) + ($blue * 114)) / 1000;
+  @if ($yiq >= 128) {
+    border-color: $black;
+  } @else {
+    border-color: $white;
+  }
+}

@@ -1,1 +1,10 @@
-<app-posts></app-posts>
+<app-header [portalConfig]="portalPublicConfig"></app-header>
+<div class="container-fluid">
+    <div class="main-container">
+        <div class="content">
+            <router-outlet></router-outlet>
+        </div>
+        <app-isi [portalConfig]="portalPublicConfig"></app-isi>
+    </div>
+</div>
+<app-footer [portalConfig]="portalPublicConfig"> </app-footer>
