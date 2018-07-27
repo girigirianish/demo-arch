@@ -2,10 +2,6 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { HttpClientModule } from "@angular/common/http";
 
-import { AngularFireModule } from "angularfire2";
-import { AngularFireDatabaseModule } from "angularfire2/database";
-import { fireBaseConfig } from "../environments/firebase.config";
-
 import { AppRouting } from "./app.routing";
 
 import { StoreModule } from "@ngrx/store";
@@ -27,8 +23,6 @@ const imports = [
   FeaturesModule,
   LayoutModule,
   HttpClientModule,
-  AngularFireModule.initializeApp(fireBaseConfig),
-  AngularFireDatabaseModule,
   StoreModule.forRoot(RootReducer)
 ];
 
