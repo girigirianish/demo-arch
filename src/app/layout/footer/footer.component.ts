@@ -12,7 +12,7 @@ export class FooterComponent implements OnChanges {
   constructor() {}
 
   ngOnChanges(changes: any): void {
-    let publicConfig = changes.portalConfig.currentValue;
+    const publicConfig = changes.portalConfig.currentValue;
     if (publicConfig) {
       this.footerViewModel = new FooterModel(
         publicConfig.footerContent,

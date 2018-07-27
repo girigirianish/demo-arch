@@ -9,12 +9,12 @@ export class ConfigurationService {
   constructor(private restService: RESTService) {}
 
   fetchConfiguration(): any {
-    let requestConfig = {
+    const requestConfig = {
       headers: {
         host_name: "localhost"
       }
     };
-    let configurationUrl = environment.apiUrl + "portals/login";
+    const configurationUrl = environment.apiUrl + "portals/login";
     return this.restService.get(configurationUrl, requestConfig);
   }
 }

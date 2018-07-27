@@ -1,15 +1,15 @@
-import { Directive, ElementRef } from "@angular/core";
+import { Directive, ElementRef, AfterViewInit } from "@angular/core";
 import * as $ from "jquery";
 
 @Directive({
   selector: "[appIsi]"
 })
-export class IsiDirective {
+export class IsiDirective implements AfterViewInit {
   constructor(private el: ElementRef) {}
 
   ngAfterViewInit(): void {
-    let isiFixed = $(this.el.nativeElement).find("#isi-fixed");
-    let isiFull = $(this.el.nativeElement).find("#isi-full");
+    const isiFixed = $(this.el.nativeElement).find("#isi-fixed");
+    const isiFull = $(this.el.nativeElement).find("#isi-full");
     if (isiFixed[0].offsetWidth !== isiFull[0].offsetWidth) {
       this.setIsiFixedWidth(isiFixed, isiFull);
     }
@@ -19,10 +19,10 @@ export class IsiDirective {
   }
 
   stickyFooter(isiFixed, isiFull): void {
-    var windowViewPort = window.innerHeight - isiFixed[0].offsetHeight;
-    var scrollTop = window.pageYOffset;
-    var elementOffset = isiFull[0].offsetTop;
-    var distance = elementOffset - scrollTop;
+    const windowViewPort = window.innerHeight - isiFixed[0].offsetHeight;
+    const scrollTop = window.pageYOffset;
+    const elementOffset = isiFull[0].offsetTop;
+    const distance = elementOffset - scrollTop;
     if (isiFixed[0].offsetWidth !== isiFull[0].offsetWidth) {
       this.setIsiFixedWidth(isiFixed, isiFull);
     }
