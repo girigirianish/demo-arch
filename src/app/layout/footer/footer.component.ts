@@ -20,6 +20,5 @@ export class FooterComponent implements OnChanges {
         publicConfig.footerLinks
       );
     }
-    console.log(this.footerViewModel, "view Model");
   }
 }

@@ -22,8 +22,6 @@ export class HeaderComponent implements OnChanges {
         this.populateHeaderLinks(publicConfig)
       );
     }
-
-    console.log(this.headerContent, "header content from header");
   }
 
   populateHeaderLinks(publicData): Array<any> {
