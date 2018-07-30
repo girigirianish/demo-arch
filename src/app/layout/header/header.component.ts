@@ -3,7 +3,7 @@ import { HeaderContentModel } from "./header-content.model";
 
 @Component({
   selector: "app-header",
-  templateUrl: "./header.component.html",
+  templateUrl: "./header.component.pug",
   styleUrls: ["./header.component.scss"]
 })
 export class HeaderComponent implements OnChanges {

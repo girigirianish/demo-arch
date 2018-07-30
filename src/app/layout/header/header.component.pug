@@ -1,0 +1,20 @@
+header.header
+  .container-fluid
+    .content
+      .overbrand
+        .row
+          .col-lg-7.col-md-6.col-xs-4
+            p.overbrand__details {{headerContent.overbrandContent}}
+          .col-lg-5.col-md-6.col-xs-8.text-right
+            ul.pipe-links-list.overbrand__overbrandList
+              li.pipe-links-list__item(*ngFor='let link of headerContent.overbrandLinks')
+                a.pipe-separated-links__link(href='{{link.href}}') {{link.label}}
+      #publicHeader.header__primary
+        .row
+          .col-md-3.header__logo
+          .col-md-3.header_public__account-info.col-md-offset-6.text-right
+            p.header_public__account-greeting
+              strong Welcome!
+            ul.pipe-links-list
+              li.pipe-links-list__item(*ngFor='let link of headerContent.publicCustomLinks')
+                a {{link.label}}
