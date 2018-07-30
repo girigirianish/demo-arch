@@ -25,8 +25,8 @@ export class HeaderComponent implements OnChanges {
   }
 
   populateHeaderLinks(publicData): Array<any> {
-    let publicLinks = [];
-    var headerObj = { label: "", href: "" };
+    const publicLinks = [];
+    let headerObj = { label: "", href: "" };
     publicData.headerLink1Label
       ? (headerObj.label = publicData.headerLink1Label)
       : "";
