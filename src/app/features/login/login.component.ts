@@ -6,7 +6,7 @@ import { share } from "../../../../node_modules/rxjs/operators";
 
 @Component({
   selector: "app-login",
-  templateUrl: "./login.component.html",
+  templateUrl: "./login.component.pug",
   styleUrls: ["./login.component.scss"]
 })
 export class LoginComponent implements OnInit {

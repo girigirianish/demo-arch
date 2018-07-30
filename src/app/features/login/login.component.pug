@@ -1,0 +1,36 @@
+div.section.landing-page#landing-page
+  div.landing-page__body
+    div.item.landing-page__hero
+      div.landing-page__banner(*ngIf="publicDataConfig | async ; let publicDataConfig")
+        p.landing-page__banner-text {{publicDataConfig.welcomeBanner}}
+    div.item.landing-page__form
+      form.form(role="form" ng-submit="login.login($event)" name="loginForm" autocomplete="off")
+        div
+          //to disable ie/edge/firefox/opera to save password.
+          input#username(style="display:none" type="text" name="username")
+          input#password(style="display:none" type="password" name="password")
+          //to disable ie/edge/firefox/opera to save password.
+
+          h3.landing-page__title Login
+          div.input-element
+            label.landing-page__form-label(for="a") Username
+            input.form-control#a(required type="text" placeholder="Your username" autocomplete="nope")
+          div.input-element
+            label.landing-page__form-label(for="b") Password
+            input.form-control#b(required type="password" placeholder="Your password" autocomplete="new-password")
+        div.landing-page__login-button
+          button.btn.btn--primary#login(type="submit") Login
+            span
+              // i.fa.fa-spin.fa-spinner
+        div.registration-info.no-margin--vertical.padding--vertical
+          P
+            a.landing-page__forgot-password-link Forgot your password?
+        div.registration-info
+          p
+            | New user? &nbsp;
+            a.landing-page__register-link Register
+  div.container-fluid
+    div.row
+      div.col-md-12.landing-page__content(*ngIf="publicDataConfig | async ; let publicDataConfig")
+        h3.landing-page__content-header([innerHTML]="publicDataConfig.welcomeHeaderContent")
+        p.landing-page__content-text([innerHTML]="publicDataConfig.welcomePageContent")
