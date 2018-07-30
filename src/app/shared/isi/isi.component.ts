@@ -3,7 +3,7 @@ import { IsiModel } from "./isi.model";
 
 @Component({
   selector: "app-isi",
-  templateUrl: "./isi.component.html",
+  templateUrl: "./isi.component.pug",
   styleUrls: ["./isi.component.scss"]
 })
 export class IsiComponent implements OnChanges {
@@ -13,7 +13,7 @@ export class IsiComponent implements OnChanges {
   constructor() {}
 
   ngOnChanges(changes: any): void {
-    let publicConfig = changes.portalConfig.currentValue;
+    const publicConfig = changes.portalConfig.currentValue;
     if (publicConfig) {
       this.isiContent = new IsiModel(
         publicConfig.isiHeaderContent,

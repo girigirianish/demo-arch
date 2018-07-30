@@ -1,0 +1,20 @@
+.isi-content(appIsi)
+  .content
+    .landing-page.section.no-padding.no-margin--vertical
+      #isi-fixed.isi.isi--fixed
+        div
+          #isi-disclaimer-fixed.isi__disclaimer(*ngIf='isiContent.isiDisclaimer')
+            p {{isiContent.isiDisclaimer}}
+          h3#isi-header-fixed
+            | {{isiContent.isiHeader}}&nbsp;
+            a#full-isi-link (View full ISI)
+          p#isi-content-fixed.isi--full([innerHTML]='isiContent.stickyContent')
+  .content.isi-content
+    #isi-full.landing-page.section.no-padding
+      article
+        .isi.landing-page__body
+          div
+            #isi-disclaimer-full.isi__disclaimer(*ngIf='isiContent.isiDisclaimer')
+              p {{isiContent.isiDisclaimer}}
+            h3#isi-header-full {{isiContent.isiHeader}}
+            p#isi-content-full.isi--full([innerHTML]='isiContent.isiContentBody')  

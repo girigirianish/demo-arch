@@ -4,8 +4,8 @@ import { AppSandboxService } from "./app.sandbox";
 
 @Component({
   selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.css"]
+  templateUrl: "./app.component.pug",
+  styleUrls: ["./app.component.scss"]
 })
 export class AppComponent implements OnInit {
   portalPublicConfig: Object = { isiHeaderContent: "", isiPageContent: "" };
