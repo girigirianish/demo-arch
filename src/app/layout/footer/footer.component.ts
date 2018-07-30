@@ -9,7 +9,7 @@ import { FooterModel } from "./footer.model";
 export class FooterComponent implements OnChanges {
   @Input() portalConfig: Object;
   footerViewModel: FooterModel;
-  private footerImage: any;
+  private footerImage: any = "../../../assets/img/powered-by-virmedica.png";
   constructor() {}
 
   ngOnChanges(changes: any): void {
@@ -20,7 +20,6 @@ export class FooterComponent implements OnChanges {
         publicConfig.footerCustomerSupport,
         publicConfig.footerLinks
       );
-      this.footerImage = require("../../../assets/img/powered-by-virmedica.png");
     }
   }
 }
