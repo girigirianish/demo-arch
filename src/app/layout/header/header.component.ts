@@ -19,30 +19,8 @@ export class HeaderComponent implements OnChanges {
       this.headerContent = new HeaderContentModel(
         publicConfig.overbrandContent,
         publicConfig.overbrandLinks,
-        this.populateHeaderLinks(publicConfig)
+        publicConfig.publicCustomLinks
       );
     }
-  }
-
-  populateHeaderLinks(publicData): Array<any> {
-    const publicLinks = [];
-    let headerObj = { label: "", href: "" };
-    publicData.headerLink1Label
-      ? (headerObj.label = publicData.headerLink1Label)
-      : "";
-    publicData.headerLink1Url
-      ? (headerObj.href = publicData.headerLink1Url)
-      : "";
-    headerObj = { label: "", href: "" };
-    publicData.headerLink2Label
-      ? (headerObj.label = publicData.headerLink2Label)
-      : "";
-    publicData.headerLink2Url
-      ? (headerObj.href = publicData.headerLink2Url)
-      : "";
-
-    publicLinks.push(headerObj);
-
-    return publicLinks;
   }
 }

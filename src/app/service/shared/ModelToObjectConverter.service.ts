@@ -1,4 +1,4 @@
-import {PublicConfig, FooterLinks, OverbrandLinks} from "../../model/PublicConfig";
+import {PublicConfig, FooterLinks, OverbrandLinks, HeaderContent, HeaderLinks} from '../../model/PublicConfig';
 import {Injectable} from "@angular/core";
 
 @Injectable({
@@ -9,7 +9,16 @@ export class ModelToObjectConverter {
   public responseToPortalConfig(response: any): PublicConfig {
     return {
       overbrandLinks: this.responseToFooterLinkLists(response),
-      footerLinks: this.responseToOverbrandLinkLists(response)
+      footerLinks: this.responseToOverbrandLinkLists(response),
+      headerContent: this.responseToHeaderContent(response)
+    };
+  }
+
+  public responseToHeaderContent(response: any): HeaderContent {
+    return {
+      overbrandContent: response.overbrandContent,
+      overbrandLinks: this.responseToOverbrandLinkLists(response),
+      publicCustomLinks: this.responseToHeaderLinks(response)
     };
   }
 
@@ -25,6 +34,20 @@ export class ModelToObjectConverter {
       label: label,
       href: href
     };
+  }
+
+  public responseToHeaderLink(label: string, href: string): HeaderLinks {
+    return {
+      label: label,
+      href: href
+    };
+  }
+
+  public responseToHeaderLinks(response: any): HeaderLinks[] {
+    const headerLinks = new Array();
+    headerLinks.push(this.responseToHeaderLink( response.headerLink1Label,  response.headerLink1Url));
+    headerLinks.push(this.responseToHeaderLink( response.headerLink2Label,  response.headerLink2Label));
+    return headerLinks;
   }
 
   public responseToFooterLinkLists(response: any): FooterLinks[] {
