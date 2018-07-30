@@ -9,7 +9,7 @@
                     <div class="col-lg-5 col-md-6 col-xs-8 text-right">
                         <ul class="pipe-links-list overbrand__overbrandList">
                             <li class="pipe-links-list__item" *ngFor="let link of headerContent.overbrandLinks">
-                                <a class="pipe-separated-links__link">{{link.label}}</a>
+                                <a class="pipe-separated-links__link" href="{{link.href}}">{{link.label}}</a>
                             </li>
                         </ul>
                     </div>

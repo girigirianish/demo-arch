@@ -9,10 +9,11 @@ import { FooterModel } from "./footer.model";
 export class FooterComponent implements OnChanges {
   @Input() portalConfig: Object;
   footerViewModel: FooterModel;
+  private footerImage: any = "../../../assets/img/powered-by-virmedica.png";
   constructor() {}
 
   ngOnChanges(changes: any): void {
-    let publicConfig = changes.portalConfig.currentValue;
+    const publicConfig = changes.portalConfig.currentValue;
     if (publicConfig) {
       this.footerViewModel = new FooterModel(
         publicConfig.footerContent,
@@ -20,6 +21,5 @@ export class FooterComponent implements OnChanges {
         publicConfig.footerLinks
       );
     }
-    console.log(this.footerViewModel, "view Model");
   }
 }

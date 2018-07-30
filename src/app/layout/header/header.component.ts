@@ -6,7 +6,7 @@ import { HeaderContentModel } from "./header-content.model";
   templateUrl: "./header.component.html",
   styleUrls: ["./header.component.scss"]
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnChanges {
   @Input() portalConfig: Object;
 
   headerContent: HeaderContentModel = new HeaderContentModel(null, [], []);
@@ -14,7 +14,7 @@ export class HeaderComponent {
   constructor() {}
 
   ngOnChanges(changes: any): void {
-    let publicConfig = changes.portalConfig.currentValue;
+    const publicConfig = changes.portalConfig.currentValue;
     if (publicConfig) {
       this.headerContent = new HeaderContentModel(
         publicConfig.overbrandContent,
@@ -22,13 +22,11 @@ export class HeaderComponent {
         this.populateHeaderLinks(publicConfig)
       );
     }
-
-    console.log(this.headerContent, "header content from header");
   }
 
   populateHeaderLinks(publicData): Array<any> {
-    let publicLinks = [];
-    var headerObj = { label: "", href: "" };
+    const publicLinks = [];
+    let headerObj = { label: "", href: "" };
     publicData.headerLink1Label
       ? (headerObj.label = publicData.headerLink1Label)
       : "";
