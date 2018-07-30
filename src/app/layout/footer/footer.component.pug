@@ -1,0 +1,14 @@
+div.container-fluid
+  div.content
+    footer.footer
+      span
+        img.footer__powered-by-logo(src="{{footerImage}}")
+        p.footer__virmedica-logo(*ngIf="portalVersion")
+          | {{portalVersion}}
+      div.footer__content
+        div.footer__logo
+          p.footer__copyright([innerHTML]="footerViewModel.footerContent")
+          p.footer__details([innerHTML]="footerViewModel.footerCustomerSupport")
+          ul.footer__links.pipe-links-list
+            li.pipe-links-list__item(*ngFor="let link of footerViewModel.footerLinks")
+              a.pipe-links__link(href="{{link.href}}" target="_blank") {{link.label}}

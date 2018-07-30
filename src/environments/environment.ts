@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: "http://vma24.virmedica.com:8085/eaccess/api/"
+  apiUrl: "http://vma24.virmedica.com:8085/eaccess/api/",
+  portalVersion: "Version: 2.10.0"
 };
 
 /*

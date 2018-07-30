@@ -3,13 +3,14 @@ import { FooterModel } from "./footer.model";
 
 @Component({
   selector: "app-footer",
-  templateUrl: "./footer.component.html",
+  templateUrl: "./footer.component.pug",
   styleUrls: ["./footer.component.scss"]
 })
 export class FooterComponent implements OnChanges {
   @Input() portalConfig: Object;
+  @Input() portalVersion: String;
   footerViewModel: FooterModel;
-  private footerImage: any = "../../../assets/img/powered-by-virmedica.png";
+  public footerImage: any = "../../../assets/img/powered-by-virmedica.png";
   constructor() {}
 
   ngOnChanges(changes: any): void {

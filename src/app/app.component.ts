@@ -9,11 +9,13 @@ import { AppSandboxService } from "./app.sandbox";
 })
 export class AppComponent implements OnInit {
   portalPublicConfig: Object = { isiHeaderContent: "", isiPageContent: "" };
+  portalVersion: String;
   constructor(private appSandboxService: AppSandboxService) {}
 
   ngOnInit() {
     this.appSandboxService.fetchConfiguration().subscribe(data => {
       this.portalPublicConfig = data;
+      this.portalVersion = this.appSandboxService.getPortalVersion();
     });
   }
 }

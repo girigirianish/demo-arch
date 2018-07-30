@@ -17,4 +17,8 @@ export class ConfigurationService {
     const configurationUrl = environment.apiUrl + "portals/login";
     return this.restService.get(configurationUrl, requestConfig);
   }
+
+  getPortalVersion(): String {
+    return environment.portalVersion;
+  }
 }

@@ -17,6 +17,10 @@ export class AppSandboxService {
     );
   }
 
+  getPortalVersion(): String {
+    return this.configurationService.getPortalVersion();
+  }
+
   formatPublicConfigData(response) {
     response.overbrandLinks = [];
     response.footerLinks = [];
