@@ -2,11 +2,8 @@ import { Injectable } from '@angular/core';
 import { RestService } from '../rest/rest.service';
 import { environment } from '../../../../environments/environment';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ConfigurationService {
-
   constructor(private restService: RestService) {}
 
   fetchConfiguration(): any {

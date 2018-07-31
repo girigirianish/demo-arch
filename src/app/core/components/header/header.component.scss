@@ -1,4 +1,4 @@
-@import "~src/assets/stylesheets/main.scss";
+@import '~assets/stylesheets/main.scss';
 
 .header {
   font-family: $font-primary;
@@ -137,7 +137,7 @@
           border-radius: 0;
         }
 
-        &.ui-sref-active > ul > li:not[ui-sref-active="ui-sref-active"] {
+        &.ui-sref-active > ul > li:not[ui-sref-active='ui-sref-active'] {
           background-color: $nav-bar-bg-color;
         }
 
@@ -331,7 +331,7 @@
       margin-left: 2em;
 
       &:before {
-        content: "\2014";
+        content: '\2014';
         margin-right: 0.5em;
       }
     }

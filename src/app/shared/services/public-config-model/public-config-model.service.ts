@@ -3,15 +3,14 @@ import {
   HeaderContent,
   Link,
   LinkMaker,
-  IsiContent, FooterConfig
-} from '../../../model/public-config/public-config.model';
-import {Injectable} from '@angular/core';
+  IsiContent,
+  FooterConfig
+} from '@app/model';
 
-@Injectable({
-  providedIn: 'root'
-})
+import { Injectable } from '@angular/core';
+
+@Injectable()
 export class PublicConfigModelService {
-
   public responseToPortalConfig(response: any): PublicConfig {
     return {
       overbrandLinks: this.responseToFooterLinkLists(response),
@@ -60,9 +59,18 @@ export class PublicConfigModelService {
   private responseToOverbrandLinkLists(response: any): Array<Link> {
     const overbrandLinks = new Array();
     overbrandLinks.push.apply(overbrandLinks, [
-      LinkMaker.createLink(response.overbrandLink1Label, response.overbrandLink1Url),
-      LinkMaker.createLink(response.overbrandLink2Label, response.overbrandLink2Url),
-      LinkMaker.createLink(response.overbrandLink3Label, response.overbrandLink3Url)
+      LinkMaker.createLink(
+        response.overbrandLink1Label,
+        response.overbrandLink1Url
+      ),
+      LinkMaker.createLink(
+        response.overbrandLink2Label,
+        response.overbrandLink2Url
+      ),
+      LinkMaker.createLink(
+        response.overbrandLink3Label,
+        response.overbrandLink3Url
+      )
     ]);
     return overbrandLinks;
   }

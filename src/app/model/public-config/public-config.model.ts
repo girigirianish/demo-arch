@@ -22,6 +22,12 @@ export interface HeaderContent {
   publicCustomLinks: Array<Link>;
 }
 
+export interface FooterContent {
+  overbrandContent: string;
+  overbrandLinks: Array<Link>;
+  publicCustomLinks: Array<Link>;
+}
+
 export interface IsiContent {
   isiHeaderContent: string;
   isiPageContent: string;
@@ -29,7 +35,6 @@ export interface IsiContent {
 }
 
 export class LinkMaker {
-
   static createLink(label: string, href: string): Link {
     return {
       label: label,

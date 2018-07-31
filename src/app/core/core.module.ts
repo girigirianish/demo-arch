@@ -1,6 +1,14 @@
-import { NgModule, Optional, SkipSelf } from '@angular/core';
+import {
+  NgModule,
+  Optional,
+  SkipSelf,
+  ModuleWithProviders
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CoreComponentsModule } from  './components/core-components.module';
+
+import { CoreComponentsModule } from './components/core-components.module';
+
+import { ConfigurationService, RestService } from './services/';
 
 @NgModule({
   imports: [CommonModule],
@@ -18,5 +26,12 @@ export class CoreModule {
         `${parentModule} has already been loaded. Import Core module in the AppModule only.`
       );
     }
+  }
+
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: CoreModule,
+      providers: [RestService, ConfigurationService]
+    };
   }
 }

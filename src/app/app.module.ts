@@ -4,17 +4,17 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRouting } from './app.routing';
 
-import { CoreModule } from './core';
-import { SharedModule } from './shared';
-import { FeaturesModule } from './features';
+import { CoreModule } from '@app/core';
+import { SharedModule } from '@app/shared';
+import { FeaturesModule } from '@app/features';
 
 import { AppComponent } from './app.component';
 
 const imports = [
   BrowserModule,
   AppRouting,
-  CoreModule,
-  SharedModule,
+  CoreModule.forRoot(),
+  SharedModule.forRoot(),
   FeaturesModule,
   HttpClientModule
 ];
