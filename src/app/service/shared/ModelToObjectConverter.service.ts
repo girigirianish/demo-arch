@@ -2,7 +2,8 @@ import {
   PublicConfig,
   HeaderContent,
   Link,
-  LinkMaker
+  LinkMaker,
+  IsiContent
 } from '../../model/PublicConfig';
 import { Injectable } from '@angular/core';
 
@@ -14,7 +15,8 @@ export class ModelToObjectConverter {
     return {
       overbrandLinks: this.responseToFooterLinkLists(response),
       footerLinks: this.responseToOverbrandLinkLists(response),
-      headerContent: this.responseToHeaderContent(response)
+      headerContent: this.responseToHeaderContent(response),
+      isiContent: this.responseToIsiContent(response)
     };
   }
 
@@ -87,5 +89,13 @@ export class ModelToObjectConverter {
       overbrandLink3
     ]);
     return overbrandLinks;
+  }
+
+  public responseToIsiContent(response: any): IsiContent {
+    return {
+      isiHeaderContent: response.isiHeaderContent,
+      isiPageContent: response.isiPageContent,
+      isiDisClaimer: response.isiDisclaimer
+    };
   }
 }
