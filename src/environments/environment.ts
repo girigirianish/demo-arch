@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   apiUrl: '<Api-Url>',
-  portalVersion: 'Version: 2.10.0'
+  portalVersion: '2.10.0'
 };
 
 /*
