@@ -1,7 +1,7 @@
-app-header([portalConfig]='portalPublicConfig')
+app-header([portalConfig]='portalPublicConfig.headerContent')
 .container-fluid
   .main-container
     .content
       router-outlet
-    app-isi([portalConfig]='portalPublicConfig')
-app-footer('[portalVersion]'='portalVersion' '[portalConfig]'='portalPublicConfig') 
+    app-isi([portalConfig]='portalPublicConfig.isiContent')
+app-footer('[portalVersion]'='portalVersion' '[portalConfig]'='portalPublicConfig')

@@ -1,14 +1,14 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 
-import { AppSandboxService } from "./app.sandbox";
+import { AppSandboxService } from './app.sandbox';
 
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.pug",
-  styleUrls: ["./app.component.scss"]
+  selector: 'app-root',
+  templateUrl: './app.component.pug',
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  portalPublicConfig: Object = { isiHeaderContent: "", isiPageContent: "" };
+  portalPublicConfig: Object = { isiHeaderContent: '', isiPageContent: '' };
   portalVersion: String;
   constructor(private appSandboxService: AppSandboxService) {}
 

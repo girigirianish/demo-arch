@@ -1,11 +1,9 @@
-import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
-
-import { IsiModule } from "./isi/isi.module";
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
 @NgModule({
   imports: [CommonModule],
-  declarations: [],
-  exports: [IsiModule]
+  declarations: []
 })
-export class SharedModule {}
+export class SharedModule {
+}

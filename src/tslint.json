@@ -1,8 +1,15 @@
 {
   "extends": "../tslint.json",
   "rules": {
+    "max-line-length": {
+      "options": [120]
+    },
+    "new-parens": true,
+    "no-arg": true,
+    "no-bitwise": true,
+    "no-conditional-assignment": true,
+    "no-consecutive-blank-lines": false,
     "directive-selector": [true, "attribute", "app", "camelCase"],
-    "component-selector": [true, "element", "app", "kebab-case"],
-    "quotemark": [true, "double"]
+    "component-selector": [true, "element", "app", "kebab-case"]
   }
 }
