@@ -1,0 +1,31 @@
+form {
+    .input-element {
+        padding: 1em 0;
+
+        label {
+            color: $app-text-color;
+            font-family: $font-primary;
+            font-size: em(14px);
+            font-weight: 600;
+            line-height: 1.5;
+
+            small {
+                font-size: smaller;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .clear-fields-link {
+        padding-left: 1em;
+    }
+
+    .form-group {
+        margin: 1em;
+    }
+
+    .disabled {
+        border: none;
+        background: transparent;
+    }
+}

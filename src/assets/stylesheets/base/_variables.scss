@@ -1,0 +1,230 @@
+// COLORS
+// ------------------------------------
+
+// Hard-coded colors
+$green: #008000;
+$orange: #ffa500;
+$red: #ff0000;
+$light-blue: #e3edf9;
+$vm-blue: #235dab;
+$vm-teal: #00c0f3;
+$white: #ffffff;
+$med-color: #0083A6;
+$rx-color: #1C7F61;
+
+$black: #000000;
+$gray-darker: #222222;
+$gray-dark: #333333;
+$gray: #555555;
+$gray-light: #777777;
+$gray-lighter: #eeeeee;
+$green-light: #00cc66;
+
+// Color aliases
+$primary: $vm-blue !default;
+$secondary: $vm-teal !default;
+$tertiary: $gray-dark !default;
+
+// Helper variables
+$danger: $red !default;
+$info: $secondary !default;
+$success: $green !default;
+$warning: $orange !default;
+
+// BOOTSTRAP OVERRIDES
+// See https://getbootstrap.com/css/#less for variable names (replace '@' with '$' for Sass)
+// ------------------------------------
+
+$brand-danger: $danger;
+$brand-info: $info;
+$brand-primary: $primary;
+$brand-success: $success;
+$brand-warning: $warning;
+
+// FORM STATES AND ALERTS
+// Define colors, form feedback states, alerts, and etc. here
+// ------------------------------------
+
+$alert-font-size: 1em;
+$alert-icon-size: 1.563em;
+$modal-username-font-size: 1em;
+
+// Success
+$state-success-bg: $success;
+$state-success-border: darken(adjust-hue($state-success-bg, -10), 5%);
+$state-success-text: $white;
+
+// Info
+$state-info-bg: $info;
+$state-info-border: darken(adjust-hue($state-info-bg, -10), 7%);
+$state-info-text: $white;
+
+// Warning
+$state-warning-bg: $warning;
+$state-warning-border: darken(adjust-hue($state-warning-bg, -10), 5%);
+$state-warning-text: $white;
+
+// Danger
+$state-danger-bg: $danger;
+$state-danger-border: darken(adjust-hue($state-danger-bg, -10), 5%);
+$state-danger-text: $white;
+
+// CUSTOMIZABLE APP STYLES
+// ------------------------------------
+
+// Customizable app background
+$app-bg-color: $gray-lighter;
+$app-text-color: $black;
+$section-bg-color: $white;
+$app-max-width: 1500px;
+
+// Public landing page
+$login-bg-color: $primary;
+$banner-bg-color: rgba($secondary, 0.7);
+
+// Nav bar
+$nav-bar-bg-color: $primary;
+
+// Links
+$link-text-color: $secondary;
+$link-text-hover-color: lighten($link-text-color, 10%);
+
+// Customizable button styles
+$slim-button-height: 2em;
+$btn-primary-bg-color: $secondary;
+$btn-primary-bg-hover-color: lighten($btn-primary-bg-color, 10%);
+$btn-primary-text-color: $white;
+$btn-primary-text-hover-color: $white;
+
+$btn-secondary-bg-color: $white;
+$btn-secondary-bg-hover-color: lighten($btn-secondary-bg-color, 10%);
+$btn-secondary-text-color: $secondary;
+$btn-secondary-text-hover-color: $secondary;
+
+$btn-disabled-bg-color: $white;
+$btn-disabled-text-color: $gray-light;
+
+$btn-success-bg-color: $success;
+$btn-success-bg-hover-color: lighten($btn-success-bg-color, 10%);
+$btn-success-text-color: $white;
+$btn-success-text-hover-color: $white;
+
+$btn-danger-bg-color: $danger;
+$btn-danger-bg-hover-color: lighten($btn-danger-bg-color, 10%);
+$btn-danger-text-color: $white;
+$btn-danger-text-hover-color: $white;
+
+$btn-gray-bg-color: $gray;
+$btn-gray-bg-hover-color: lighten($btn-gray-bg-color, 10%);
+$btn-gray-text-color: $white;
+$btn-gray-text-hover-color: $white;
+
+$btn-green-light-bg-color: $green-light;
+$btn-green-light-bg-hover-color: lighten($btn-green-light-bg-color, 10%);
+$btn-green-light-text-color: $white;
+$btn-green-light-text-hover-color: $white;
+
+//Customizable images
+$hero-image-url: '../img/hero-image.png' !default;
+
+//Customizable dynamic alert styles
+$success-color: $green;
+$warning-color: $orange;
+$danger-color: $red;
+
+// Widgets
+$widget-bg-color: $primary;
+$widget-border-color: $primary;
+$widget-stat-text-color: $secondary;
+$widget-title-text-color: $white;
+$widget-icon-color: $white;
+
+// Customizable table styles
+$table-header-bg-color: $light-blue !default;
+$table-body-text-color: $gray;
+$table-even-row-bg: $gray-lighter;
+$table-odd-row-bg: $white;
+$table-border-color: $black;
+$table-inactive-text-color: $gray-light;
+
+$table-secondary-header-background: lighten($gray-light,30%);
+$table-secondary-even-row-background: lighten($gray-light,50%);
+
+// Customizable tab styles
+$tab-active-bg-color: $white;
+$tab-inactive-bg-color: $gray-lighter;
+$tab-border-color: $gray;
+
+// Search
+$search-input-border-color: $gray-lighter;
+$search-icon-color: $app-text-color;
+
+// Inputs
+$input-height: 40px;
+$selected-radio-input-color: $secondary;
+$selected-checkbox-input-color: $primary;
+
+// Tooltips
+$tooltip-fill: $gray-light;
+
+// Fonts
+$font-primary: 'Open Sans', 'Arial', sans-serif !default;
+
+// Modals
+$modal-bg-color: $white;
+$modal-header-text-color: $secondary;
+
+// Miscellaneous
+$default-border-radius: 6px;
+$default-padding: 2em;
+
+//alert colors
+
+$alert-success: $green;
+$alert-message: $black;
+$alert-success-title: $green;
+$message-close: $black;
+$alert-danger: $danger;
+$alert-danger-title: $danger;
+
+//logo background
+$logo-path: "/images/eAccess-logo.png" !default;
+
+//Footer
+$logo-footer-bg:  $gray-lighter !default;
+$logo-footer-width:  200px;
+$logo-footer-height: 80px;
+
+//dashboard
+$dashboard-sponsored-height: 150px !default;
+$dashboard-sponsored-width: 100% !default;
+$dashboard-sponsored-url: url('') !default;
+
+//breadcrumb
+$breadcrumb-font-size: em(14px);
+
+//isi
+$isi-font-size: 0.714em;
+$isi-header-font-size: 0.857em;
+
+// sub-menu
+$sub-menu-background-color: $secondary;
+
+//bv-selection
+$product-type-color: $black;
+$product-name-color: $black;
+$verify-title-color: $black;
+
+
+//icon
+$small-icon-size: 18px;
+$medium-icon-size: 22px;
+
+
+//rx icon
+$rx-icon-white: '/images/icon-rx-white.svg';
+$rx-icon: '/images/icon-rx-color.svg';
+
+//med icon
+$med-icon-white: '/images/icon-med-white.svg';
+$med-icon: '/images/icon-med-color.svg';

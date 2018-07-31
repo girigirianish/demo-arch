@@ -1,0 +1,71 @@
+// Responsive breakpoints
+
+$xs-screen: 480px;
+$sm-screen: 768px;
+$md-screen: 1024px;
+$lg-screen: 1200px;
+$xl-screen: 1440px;
+
+// Mixins
+
+// Calculate text color based on bacground-color
+@mixin text-color($bgColor) {
+    $red: red($bgColor);
+    $green: green($bgColor);
+    $blue: blue($bgColor);
+    $yiq: (($red*299) + ($green*587) +($blue*114)) / 1000;
+    @if ($yiq >= 128) {
+        color: $black;
+    } @else {
+        color: $white;
+    }
+}
+
+// Calculate border color based on background-color
+@mixin border-color($bgColor) {
+    $red: red($bgColor);
+    $green: green($bgColor);
+    $blue: blue($bgColor);
+    $yiq: (($red*299) + ($green*587) +($blue*114)) / 1000;
+    @if ($yiq >= 128) {
+        border-color: $black;
+    } @else {
+        border-color: $white;
+    }
+}
+
+// center vertically and/or horizontally an absolute positioned element
+
+@mixin center($xy:xy) {
+    @if $xy == xy {
+        left: 50%;
+        top: 50%;
+        bottom: auto;
+        right: auto;
+        transform: translate( -50%, -50%);
+    }
+    @else if $xy == x {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+    }
+    @else if $xy == y {
+        top: 50%;
+        bottom: auto;
+        transform: translateY(-50%);
+    }
+}
+
+// media queries
+
+@mixin MQ($canvas) {
+    @if $canvas == S {
+        @media only screen and (min-width: $xs-screen) { @content; }
+    }
+    @else if $canvas == M {
+        @media only screen and (min-width: $sm-screen) { @content; }
+    }
+    @else if $canvas == L {
+        @media only screen and (min-width: $md-screen) { @content; }
+    }
+}

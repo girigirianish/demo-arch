@@ -3,12 +3,11 @@ div.container-fluid
     footer.footer
       span
         img.footer__powered-by-logo(src="{{footerImage}}")
-        p.footer__virmedica-logo(*ngIf="portalVersion")
-          | {{portalVersion}}
+        p.footer__portal-version(ng-if="footer.showPortalVersion") Version: {{portalVersion}}
       div.footer__content
         div.footer__logo
-          p.footer__copyright([innerHTML]="footerViewModel.footerContent")
-          p.footer__details([innerHTML]="footerViewModel.footerCustomerSupport")
-          ul.footer__links.pipe-links-list
-            li.pipe-links-list__item(*ngFor="let link of footerViewModel.footerLinks")
-              a.pipe-links__link(href="{{link.href}}" target="_blank") {{link.label}}
+        p.footer__copyright([innerHTML]="footerViewModel.footerContent")
+        p.footer__details([innerHTML]="footerViewModel.footerCustomerSupport")
+        ul.footer__links.pipe-links-list
+          li.pipe-links-list__item(*ngFor="let link of footerViewModel.footerLinks")
+            a.pipe-links__link(href="{{link.href}}" target="_blank") {{link.label}}

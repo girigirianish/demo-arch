@@ -1,0 +1,28 @@
+form {
+  input[type="text"] {
+    height: $input-height;
+
+    &.text-input-error {
+      border-color: $danger-color;
+
+      &::placeholder {
+        color: $danger-color;
+      }
+    }
+  }
+
+  textarea {
+    left: 0;
+    top: 0;
+    width: em(992px);
+    height: em(202px);
+    font-weight: 400;
+    font-style: normal;
+    font-size: em(14px);
+    text-decoration: none;
+    color: $tertiary;
+    text-align: left;
+    resize: none;
+    box-sizing: border-box;
+  }
+}

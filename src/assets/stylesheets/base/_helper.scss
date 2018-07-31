@@ -1,0 +1,152 @@
+.margin-vertical {
+    margin-top: em(15px) !important;
+    margin-bottom: em(15px) !important;
+}
+
+.margin-horizontal {
+    margin-left: em(15px) !important;
+    margin-right: em(15px) !important;
+}
+
+.no-padding {
+    padding: 0 !important;
+    &--horizontal {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    &--vertical {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+}
+
+.padding {
+    padding: em(15px) !important;
+    &--horizontal {
+        padding-left: em(15px) !important;
+        padding-right: em(15px) !important;
+    }
+    &--vertical {
+        padding-top: em(15px) !important;
+        padding-bottom: em(15px) !important;
+    }
+    &--top {
+        padding-top: em(15px) !important;
+    }
+    &--bottom {
+        padding-bottom: em(15px) !important;
+    }
+    &--left {
+        padding-left: em(15px) !important;
+    }
+    &--right {
+        padding-right: em(15px) !important;
+    }
+}
+
+.font-size-inherit {
+    font-size: inherit;
+}
+
+.icon-margin-left {
+    &--large {
+        margin-left: 0.5em;
+    }
+
+    &--small {
+        margin-left: 0.25em;
+    }
+}
+
+.icon-margin-right {
+    &--large {
+        margin-right: 0.5em;
+    }
+
+    &--small {
+        margin-right: 0.25em;
+    }
+}
+
+.no-margin {
+    &--vertical {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    &--horizontal {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+
+    &--bottom {
+        margin-bottom: 0;
+    }
+
+    &--top {
+        margin-top: 0;
+    }
+
+    &--left {
+        margin-left: 0;
+    }
+
+    &--right {
+        margin-right: 0;
+    }
+}
+
+.display-inline {
+    display: inline;
+    &--block {
+        display: inline-block;
+    }
+}
+
+.list-inside {
+    list-style-position: inside;
+}
+
+.relative {
+    position: relative;
+}
+
+.flex {
+    display: flex;
+}
+
+.icon-font {
+    font-family: $icon-font !important;
+}
+
+a.link {
+    &--disabled {
+        cursor: not-allowed;
+        text-decoration: none;
+    }
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.cursor-pointer {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.font-weight-inherit {
+    font-weight: inherit;
+}
+
+.link-color {
+    color: $link-text-color;
+}
+
+.absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
