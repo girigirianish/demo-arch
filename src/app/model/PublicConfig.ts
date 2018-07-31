@@ -1,26 +1,21 @@
 export interface PublicConfig {
-  overbrandLinks: OverbrandLinks[];
-  footerLinks: FooterLinks[];
+  overbrandLinks: Array<Link>;
+  footerLinks: Array<Link>;
   headerContent: HeaderContent;
 }
 
-export interface FooterLinks {
-  label: string;
-  href: string;
+export class Link {
+  constructor(public label: string, public href: string) {}
 }
 
-export interface OverbrandLinks {
-  label: string;
-  href: string;
-}
-
-export interface HeaderLinks {
-  label: string;
-  href: string;
+export class LinkMaker {
+  static createLink(label: string, href: string): Link {
+    return new Link(label, href);
+  }
 }
 
 export interface HeaderContent {
   overbrandContent: string;
-  overbrandLinks: OverbrandLinks[];
-  publicCustomLinks: HeaderLinks[];
+  overbrandLinks: Array<Link>;
+  publicCustomLinks: Array<Link>;
 }
