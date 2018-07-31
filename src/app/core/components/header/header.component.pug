@@ -17,7 +17,7 @@ header.header
               strong Welcome!
             ul.pipe-links-list
               li.pipe-links-list__item(*ngFor='let link of headerContent.publicCustomLinks')
-                a {{link.label}}
+                a(href='{{link.href}}') {{link.label}}
       .header__nav
         nav#navigation
           span.nav

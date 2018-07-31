@@ -1,8 +1,14 @@
 export interface PublicConfig {
   overbrandLinks: Array<Link>;
-  footerLinks: Array<Link>;
+  footerConfig: FooterConfig;
   headerContent: HeaderContent;
   isiContent: IsiContent;
+}
+
+export interface FooterConfig {
+  footerContent: string;
+  footerCustomerSupport: string;
+  footerLinks: Array<Link>;
 }
 
 export interface Link {

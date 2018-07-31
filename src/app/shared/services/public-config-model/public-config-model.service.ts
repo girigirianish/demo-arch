@@ -3,9 +3,9 @@ import {
   HeaderContent,
   Link,
   LinkMaker,
-  IsiContent
+  IsiContent, FooterConfig
 } from '../../../model/public-config/public-config.model';
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -15,9 +15,17 @@ export class PublicConfigModelService {
   public responseToPortalConfig(response: any): PublicConfig {
     return {
       overbrandLinks: this.responseToFooterLinkLists(response),
-      footerLinks: this.responseToOverbrandLinkLists(response),
+      footerConfig: this.responseToFooterConfig(response),
       headerContent: this.responseToHeaderContent(response),
       isiContent: this.responseToIsiContent(response)
+    };
+  }
+
+  private responseToFooterConfig(response: any): FooterConfig {
+    return {
+      footerContent: response.footerContent,
+      footerCustomerSupport: response.footerCustomerSupport,
+      footerLinks: this.responseToOverbrandLinkLists(response)
     };
   }
 
