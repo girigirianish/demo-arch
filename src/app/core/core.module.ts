@@ -1,9 +1,11 @@
-import { NgModule, Optional, SkipSelf } from "@angular/core";
-import { CommonModule } from "@angular/common";
+import { NgModule, Optional, SkipSelf } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { CoreComponentsModule } from  './components/core-components.module';
 
 @NgModule({
   imports: [CommonModule],
-  declarations: []
+  declarations: [],
+  exports: [CoreComponentsModule]
 })
 export class CoreModule {
   constructor(

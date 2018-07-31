@@ -1,12 +1,15 @@
-import { Injectable } from "@angular/core";
-import { Observable } from "rxjs";
-import { map } from "rxjs/operators";
-import { ConfigurationService } from "./service/configuration/configuration.service";
-import { ModelToObjectConverter } from  "./service/shared/ModelToObjectConverter.service";
+import {Injectable} from '@angular/core';
+import {Observable} from 'rxjs';
+import {map} from 'rxjs/operators';
+import {ConfigurationService} from './core/services/configuration/configuration.service';
+import {PublicConfigModelConverter} from './shared/shared/public-config-model-converter.service';
 
-@Injectable({ providedIn: "root" })
+@Injectable({providedIn: 'root'})
 export class AppSandboxService {
-  constructor(private configurationService: ConfigurationService, private modelToObjectConverter: ModelToObjectConverter) {}
+
+  constructor(private configurationService: ConfigurationService, private modelToObjectConverter: PublicConfigModelConverter) {
+  }
+
   fetchConfiguration(): Observable<any> {
     return this.configurationService.fetchConfiguration().pipe(
       map(response => {

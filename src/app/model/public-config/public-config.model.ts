@@ -10,15 +10,6 @@ export interface Link {
   href: string;
 }
 
-export class LinkMaker {
-  static createLink(label: string, href: string): Link {
-    return {
-      label: label,
-      href: href
-    };
-  }
-}
-
 export interface HeaderContent {
   overbrandContent: string;
   overbrandLinks: Array<Link>;
@@ -29,4 +20,14 @@ export interface IsiContent {
   isiHeaderContent: string;
   isiPageContent: string;
   isiDisClaimer: string;
+}
+
+export class LinkMaker {
+
+  static createLink(label: string, href: string): Link {
+    return {
+      label: label,
+      href: href
+    };
+  }
 }
